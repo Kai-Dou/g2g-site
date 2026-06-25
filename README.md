@@ -59,16 +59,9 @@ Substitua os arquivos em `public/images/` por fotos reais:
 3. `npm run build` / output padrão
 4. Analytics e Speed Insights já integrados (`@vercel/analytics`, `@vercel/speed-insights`)
 
-## Logo (`public/logo.png`)
+## Logo (`public/logo-figma.svg`)
 
-| Uso | Formato ideal | Dimensões recomendadas |
-|-----|---------------|------------------------|
-| Navbar / site | **SVG** ou PNG transparente | **600×200 px** (horizontal, proporção ~3:1) |
-| Retina (@2x) | PNG | **1200×400 px** |
-| Favicon | PNG / ICO | 32×32, 180×180 (Apple) |
-| Open Graph | PNG | 1200×630 px |
-
-Evite quadrado 500×500 com muito espaço vazio — o logo fica pequeno na tela. Exporte recortado, só o lockup G2G + tagline.
+Export horizontal **600×200 px** (SVG ou PNG @2x). Arquivo atual: `logo-figma.svg`.
 
 ## Contato
 

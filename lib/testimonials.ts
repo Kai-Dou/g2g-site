@@ -6,29 +6,26 @@ export interface TestimonialVideo {
   video: string;
 }
 
-/**
- * Depoimentos em vídeo da frota G2G.
- * Substituir nomes/citações quando houver legendas oficiais dos reels.
- */
+/** Depoimentos em vídeo da frota G2G */
 export const testimonialVideos: TestimonialVideo[] = [
   {
     id: "reels-00",
-    name: "Motorista G2G",
-    role: "Cargo van — EUA",
+    name: "Ricardo",
+    role: "Motorista G2G — Cargo van",
     quote: "Comecei rápido com a G2G, cargas garantidas desde o dia 1.",
     video: "/videos/Reels-00.mp4",
   },
   {
     id: "reels-01",
-    name: "Motorista G2G",
-    role: "Cargo van — EUA",
+    name: "Ismael",
+    role: "Motorista G2G — Cargo van",
     quote: "Chega de ficar parado. Aqui tenho cargas premium e suporte 24/7.",
     video: "/videos/Reels-01.mp4",
   },
   {
     id: "reels-02",
-    name: "Motorista G2G",
-    role: "Cargo van — EUA",
+    name: "Ricardo",
+    role: "Motorista G2G — Cargo van",
     quote: "Cresço com força, com uma parceria de longo prazo de verdade.",
     video: "/videos/Reels-02.mp4",
   },

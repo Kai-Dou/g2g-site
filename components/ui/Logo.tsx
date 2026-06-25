@@ -6,12 +6,14 @@ interface LogoProps {
   size?: "sm" | "md" | "lg";
 }
 
-/** Altura de exibição — use PNG/SVG horizontal ~3:1 para melhor nitidez */
 const displayHeight = {
-  sm: 48,
-  md: 64,
-  lg: 80,
+  sm: 44,
+  md: 56,
+  lg: 72,
 } as const;
+
+const LOGO_WIDTH = 600;
+const LOGO_HEIGHT = 200;
 
 export function Logo({ className, size = "md" }: LogoProps) {
   const height = displayHeight[size];
@@ -19,16 +21,14 @@ export function Logo({ className, size = "md" }: LogoProps) {
   return (
     <span className={cn("inline-flex shrink-0 items-center", className)}>
       <Image
-        src="/logo.png"
+        src="/logo-figma.svg"
         alt="G2G Logistics — Good To Go"
-        width={500}
-        height={500}
+        width={LOGO_WIDTH}
+        height={LOGO_HEIGHT}
         className="w-auto object-contain"
         style={{ height }}
-        sizes={`${Math.round(height * 3)}px`}
-        quality={100}
+        sizes={`${Math.round(height * (LOGO_WIDTH / LOGO_HEIGHT))}px`}
         priority
-        unoptimized
       />
     </span>
   );
