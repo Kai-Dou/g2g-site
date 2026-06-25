@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Placeholder  retrato motorista 1">
+  <rect width="800" height="600" fill="#001B33"/>
+  <circle cx="400" cy="220" r="90" fill="#0A4A85"/>
+  <rect x="280" y="330" width="240" height="200" rx="40" fill="#003366"/>
+  <text x="400" y="560" text-anchor="middle" fill="#9AA5B1" font-family="sans-serif" font-size="20">Placeholder  Jo�o</text>
+</svg>

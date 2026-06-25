@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# G2G Logistics — Site Institucional
 
-## Getting Started
+Site institucional da **G2G Logistics (Good To Go Logistics LLC)**, empresa de logística nos EUA focada em agregar motoristas de cargo van brasileiros e latinos.
 
-First, run the development server:
+## Stack
+
+- Next.js 14+ (App Router) + TypeScript
+- Tailwind CSS
+- Framer Motion
+- lucide-react
+
+## Como rodar
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) no navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Comando        | Descrição              |
+|----------------|------------------------|
+| `npm run dev`  | Servidor de desenvolvimento |
+| `npm run build`| Build de produção      |
+| `npm run start`| Servidor de produção   |
+| `npm run lint` | ESLint                 |
 
-## Learn More
+## Estrutura
 
-To learn more about Next.js, take a look at the following resources:
+```
+app/
+  api/contact/route.ts   # Endpoint fake de contato (TODO: WhatsApp/CRM)
+  globals.css            # Design system + .glass-card
+  layout.tsx
+  page.tsx
+components/
+  sections/              # Seções da landing page
+  ui/                    # Componentes reutilizáveis
+lib/
+public/images/           # Placeholders SVG (substituir por fotos reais .jpg)
+tailwind.config.ts       # Tokens de cor G2G
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Imagens placeholder
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Substitua os arquivos em `public/images/` por fotos reais:
 
-## Deploy on Vercel
+- `hero-truck-night.svg` → estrada/caminhão à noite
+- `driver-portrait-1.svg` → retrato motorista (persona João)
+- `driver-portrait-2.svg` → retrato motorista (persona Carlos)
+- `driver-portrait-3.svg` → retrato motorista (persona Ricardo)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deploy na Vercel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Conecte o repositório [github.com/Kai-Dou/g2g-site](https://github.com/Kai-Dou/g2g-site)
+2. Framework: **Next.js** (detectado automaticamente)
+3. `npm run build` / output padrão
+4. Analytics e Speed Insights já integrados (`@vercel/analytics`, `@vercel/speed-insights`)
+
+## Logo (`public/logo.png`)
+
+| Uso | Formato ideal | Dimensões recomendadas |
+|-----|---------------|------------------------|
+| Navbar / site | **SVG** ou PNG transparente | **600×200 px** (horizontal, proporção ~3:1) |
+| Retina (@2x) | PNG | **1200×400 px** |
+| Favicon | PNG / ICO | 32×32, 180×180 (Apple) |
+| Open Graph | PNG | 1200×630 px |
+
+Evite quadrado 500×500 com muito espaço vazio — o logo fica pequeno na tela. Exporte recortado, só o lockup G2G + tagline.
+
+## Contato
+
+- Instagram: [@g2glogistics_llc](https://www.instagram.com/g2glogistics_llc)

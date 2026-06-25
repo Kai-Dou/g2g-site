@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500" role="img" aria-label="Ford Transit cargo van">
+  <defs>
+    <linearGradient id="ft-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0f2f5"/>
+      <stop offset="100%" stop-color="#c0c8d0"/>
+    </linearGradient>
+    <linearGradient id="ft-glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7a94a8"/>
+      <stop offset="100%" stop-color="#506070"/>
+    </linearGradient>
+    <filter id="ft-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="18" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <ellipse cx="450" cy="420" rx="310" ry="26" fill="#000" opacity="0.25"/>
+  <g filter="url(#ft-shadow)">
+    <path d="M100 290 L160 170 L300 140 L700 140 L780 190 L800 290 L800 350 L100 350 Z" fill="url(#ft-body)"/>
+    <path d="M160 170 L300 140 L420 140 L420 260 L160 260 Z" fill="url(#ft-glass)"/>
+    <path d="M420 140 L700 140 L740 190 L740 260 L420 260 Z" fill="url(#ft-glass)" opacity="0.85"/>
+    <rect x="110" y="300" width="28" height="48" rx="5" fill="#2a3038"/>
+    <rect x="762" y="300" width="28" height="48" rx="5" fill="#2a3038"/>
+    <circle cx="138" cy="355" r="36" fill="#1a1f24"/>
+    <circle cx="138" cy="355" r="20" fill="#4a5560"/>
+    <circle cx="762" cy="355" r="36" fill="#1a1f24"/>
+    <circle cx="762" cy="355" r="20" fill="#4a5560"/>
+    <rect x="380" y="270" width="180" height="10" rx="2" fill="#003478"/>
+    <text x="470" y="278" text-anchor="middle" fill="#003478" font-family="sans-serif" font-size="13" font-weight="bold">TRANSIT</text>
+  </g>
+</svg>
