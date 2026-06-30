@@ -32,7 +32,7 @@ export function Button({
   ...props
 }: ButtonProps) {
   const classes = cn(
-    "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm md:text-base transition-all duration-250 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-g2g-yellow",
+    "inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-6 py-3 text-sm md:text-base transition-all duration-250 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-g2g-yellow active:scale-[0.98]",
     variants[variant],
     className,
   );

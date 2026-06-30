@@ -47,7 +47,7 @@ tailwind.config.ts       # Tokens de cor G2G
 
 Substitua os arquivos em `public/images/` por fotos reais:
 
-- `hero-truck-night.svg` → estrada/caminhão à noite
+- `hero-truck-night.mp4` → vídeo estrada/caminhão à noite em `public/videos/` (hero)
 - `driver-portrait-1.svg` → retrato motorista (persona João)
 - `driver-portrait-2.svg` → retrato motorista (persona Carlos)
 - `driver-portrait-3.svg` → retrato motorista (persona Ricardo)
@@ -59,10 +59,16 @@ Substitua os arquivos em `public/images/` por fotos reais:
 3. `npm run build` / output padrão
 4. Analytics e Speed Insights já integrados (`@vercel/analytics`, `@vercel/speed-insights`)
 
-## Logo (`public/logo-figma.svg`)
+## Logo (`public/logo-white.png`)
 
-Export horizontal **600×200 px** (SVG ou PNG @2x). Arquivo atual: `logo-figma.svg`.
+Logo branco horizontal **600×200 px** para fundo escuro (navbar e footer).
+
+## Hero em vídeo
+
+Coloque `public/videos/hero-truck-night.mp4` (estrada/caminhão à noite, MP4).  
+Sem o arquivo, o hero usa apenas o gradiente navy — não é bug.
 
 ## Contato
 
+- WhatsApp: [+1 (774) 871-0618](https://wa.me/17748710618?text=Quero+fazer+parte+da+G2G,+minha+van+esta+pronta)
 - Instagram: [@g2glogistics_llc](https://www.instagram.com/g2glogistics_llc)

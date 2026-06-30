@@ -47,6 +47,9 @@ body {
   color: var(--g2g-white);
   font-family: var(--font-montserrat), system-ui, sans-serif;
   min-height: 100vh;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .glass-card {
@@ -91,7 +94,7 @@ body {
 
 .section-padding {
   padding-inline: clamp(1rem, 4vw, 2rem);
-  padding-block: clamp(4rem, 8vw, 6rem);
+  padding-block: clamp(3rem, 7vw, 6rem);
 }
 
 :focus-visible {

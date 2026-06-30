@@ -1,43 +1,11 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Button } from "@/components/ui/Button";
+import { WHATSAPP_CTA_URL } from "@/lib/whatsapp";
 
 export function FinalCTA() {
-  const [phone, setPhone] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">(
-    "idle",
-  );
-  const [message, setMessage] = useState("");
-
-  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setStatus("loading");
-    setMessage("");
-
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ phone }),
-      });
-
-      const data = (await response.json()) as { message?: string; error?: string };
-
-      if (!response.ok) {
-        throw new Error(data.error ?? "Erro ao enviar");
-      }
-
-      setStatus("success");
-      setMessage(data.message ?? "Recebemos seu contato! Em breve entraremos em contato.");
-      setPhone("");
-    } catch {
-      setStatus("error");
-      setMessage("Não foi possível enviar agora. Tente novamente ou fale conosco no Instagram.");
-    }
-  };
-
   return (
     <section
       id="contato"
@@ -55,55 +23,29 @@ export function FinalCTA() {
             aria-hidden
           />
 
-          <div className="glass-card relative mx-auto max-w-2xl p-8 text-center md:p-12">
+            <div className="glass-card relative mx-auto max-w-2xl p-6 text-center sm:p-8 md:p-12">
             <h2
               id="cta-heading"
-              className="font-display text-3xl font-extrabold uppercase tracking-tight text-white md:text-4xl"
+              className="font-display text-2xl font-extrabold uppercase tracking-tight text-white sm:text-3xl md:text-4xl"
             >
               Pronto para crescer com força, não devagar?
             </h2>
             <p className="mt-4 text-base text-g2g-gray-100/90 md:text-lg">
-              Deixe seu WhatsApp ou telefone e nossa equipe entra em contato para
-              avaliar seu perfil.
+              Fale com a equipe G2G no WhatsApp, resposta rápida em português.
             </p>
 
-            <form
-              onSubmit={handleSubmit}
-              className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-stretch"
+            <Button
+              href={WHATSAPP_CTA_URL}
+              variant="primary"
+              external
+              className="mt-8 w-full gap-2 px-6 py-4 text-base sm:w-auto sm:px-8"
             >
-              <label htmlFor="phone" className="sr-only">
-                WhatsApp ou telefone
-              </label>
-              <input
-                id="phone"
-                name="phone"
-                type="tel"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                placeholder="WhatsApp ou telefone (opcional)"
-                className="flex-1 rounded-full border border-white/15 bg-white/8 px-5 py-3 text-white placeholder:text-g2g-gray-400 focus:border-g2g-yellow focus:outline-none focus:ring-2 focus:ring-g2g-yellow/30"
-              />
-              <Button
-                type="submit"
-                variant="primary"
-                className="px-8 py-3 whitespace-nowrap"
-                disabled={status === "loading"}
-              >
-                {status === "loading" ? "Enviando..." : "Quero me Agregar Agora"}
-              </Button>
-            </form>
-
-            {message && (
-              <p
-                role="status"
-                className={`mt-4 text-sm ${status === "error" ? "text-g2g-red" : "text-g2g-yellow"}`}
-              >
-                {message}
-              </p>
-            )}
+              <WhatsAppIcon size={22} />
+              Quero me Agregar
+            </Button>
 
             <p className="mt-6 text-xs text-g2g-gray-400">
-              Ou fale direto no Instagram{" "}
+              Instagram{" "}
               <a
                 href="https://www.instagram.com/g2glogistics_llc"
                 target="_blank"

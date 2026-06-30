@@ -29,7 +29,7 @@ const config: Config = {
         display: ["var(--font-montserrat)", "system-ui", "sans-serif"],
       },
       fontSize: {
-        hero: "clamp(2.5rem, 5vw + 1rem, 5.5rem)",
+        hero: "clamp(2rem, 4.5vw + 0.75rem, 5.5rem)",
       },
       borderRadius: {
         glass: "20px",

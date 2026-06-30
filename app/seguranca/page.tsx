@@ -12,8 +12,8 @@ import {
 import { Navbar } from "@/components/sections/Navbar";
 import { Footer } from "@/components/sections/Footer";
 import { Button } from "@/components/ui/Button";
+import { WHATSAPP_CTA_URL } from "@/lib/whatsapp";
 import {
-  chainRequiredStates,
   safetyChecklist,
   safetySections,
 } from "@/lib/safety-content";
@@ -128,8 +128,8 @@ export default function SegurancaPage() {
               Suporte 24/7 em português — você nunca está sozinho na estrada.
             </p>
             <div className="mt-6 flex flex-col justify-center gap-4 sm:flex-row">
-              <Button href="/#contato" variant="primary">
-                Falar com a equipe
+              <Button href={WHATSAPP_CTA_URL} variant="primary" external>
+                Falar no WhatsApp
               </Button>
               <Button
                 href="https://www.instagram.com/g2glogistics_llc"

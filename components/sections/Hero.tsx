@@ -1,11 +1,13 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { DollarSign } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { HeroBackground } from "@/components/sections/HeroBackground";
 import { useMotionSafe } from "@/lib/motion";
+import { WHATSAPP_CTA_URL } from "@/lib/whatsapp";
 
 export function Hero() {
   const { fadeUp } = useMotionSafe();
@@ -13,20 +15,10 @@ export function Hero() {
   return (
     <section
       id="inicio"
-      className="relative flex min-h-screen items-center overflow-hidden pt-24"
+      className="relative flex min-h-[100dvh] items-center overflow-hidden pt-28 sm:pt-24"
       aria-label="Apresentação G2G Logistics"
     >
-      <div className="absolute inset-0 -z-10">
-        <Image
-          src="/images/hero-truck-night.svg"
-          alt="Estrada americana à noite com caminhão de carga em movimento"
-          fill
-          priority
-          className="object-cover"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-g2g-navy-950/85 via-g2g-navy-900/75 to-g2g-navy-800/90" />
-      </div>
+      <HeroBackground />
 
       <div className="section-padding relative mx-auto grid w-full max-w-7xl gap-12 lg:grid-cols-[1fr_auto] lg:items-center">
         <motion.div
@@ -45,14 +37,14 @@ export function Hero() {
 
           <motion.h1
             variants={fadeUp}
-            className="font-display text-hero font-black uppercase leading-[1.05] tracking-tight text-white"
+            className="font-display text-hero font-black uppercase leading-[1.08] tracking-tight text-white"
           >
             Conectando motoristas ao sucesso
           </motion.h1>
 
           <motion.p
             variants={fadeUp}
-            className="mt-6 max-w-2xl text-lg leading-relaxed text-g2g-gray-100 md:text-xl"
+            className="mt-6 max-w-2xl text-base leading-relaxed text-g2g-gray-100 sm:text-lg md:text-xl"
           >
             Cargas garantidas. Suporte 24/7. Ganhos de até $2.500 por semana
             dirigindo cargo van nos EUA.
@@ -60,12 +52,22 @@ export function Hero() {
 
           <motion.div
             variants={fadeUp}
-            className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center"
+            className="mt-8 flex w-full flex-col gap-3 sm:mt-10 sm:flex-row sm:items-stretch sm:gap-4"
           >
-            <Button href="#contato" variant="primary" className="px-8 py-4">
+            <Button
+              href={WHATSAPP_CTA_URL}
+              variant="primary"
+              external
+              className="w-full gap-2 px-6 py-4 text-base sm:w-auto sm:px-8"
+            >
+              <WhatsAppIcon size={20} />
               Quero me Agregar
             </Button>
-            <Button href="#como-funciona" variant="outline-glass" className="px-8 py-4">
+            <Button
+              href="#como-funciona"
+              variant="outline-glass"
+              className="w-full px-6 py-4 text-base sm:w-auto sm:px-8"
+            >
               Como Funciona
             </Button>
           </motion.div>
@@ -75,8 +77,10 @@ export function Hero() {
               <p className="text-xs font-medium uppercase tracking-wider text-g2g-gray-400">
                 Ganhos semanais
               </p>
-              <p className="font-display text-2xl font-extrabold text-white">
-                $1.500–$2.500<span className="text-base font-semibold">/semana</span>
+              <p className="font-display text-2xl font-extrabold leading-tight text-white">
+                $1.500
+                <br />
+                $2.500<span className="text-base font-semibold">/semana</span>
               </p>
             </div>
           </motion.div>
@@ -90,9 +94,10 @@ export function Hero() {
             <p className="text-sm font-medium uppercase tracking-wider text-g2g-gray-400">
               Ganhos semanais
             </p>
-            <p className="mt-1 font-display text-3xl font-extrabold text-white">
-              $1.500–$2.500
-              <span className="text-lg font-semibold text-g2g-gray-100">/semana</span>
+            <p className="mt-1 font-display text-3xl font-extrabold leading-tight text-white">
+              $1.500
+              <br />
+              $2.500<span className="text-lg font-semibold text-g2g-gray-100">/semana</span>
             </p>
             <p className="mt-3 text-sm text-g2g-gray-100/80">
               Cargas premium com pagamento semanal garantido.

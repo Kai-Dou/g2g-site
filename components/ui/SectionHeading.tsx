@@ -43,7 +43,7 @@ export function SectionHeading({
           {eyebrow}
         </p>
       )}
-      <h2 className="font-display text-3xl font-extrabold uppercase tracking-tight text-white md:text-4xl lg:text-5xl">
+      <h2 className="font-display text-2xl font-extrabold uppercase tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl">
         {title}
       </h2>
       <div

@@ -5,6 +5,8 @@ import { DollarSign, Calendar, TrendingUp } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
+import { WHATSAPP_CTA_URL } from "@/lib/whatsapp";
+import { MessageCircle } from "lucide-react";
 import {
   BASELINE_DAYS,
   WEEKLY_MIN,
@@ -126,7 +128,13 @@ export function EarningsCalculator() {
               </div>
             </div>
 
-            <Button href="#contato" variant="primary" className="w-full py-4">
+            <Button
+              href={WHATSAPP_CTA_URL}
+              variant="primary"
+              external
+              className="w-full gap-2 py-4"
+            >
+              <MessageCircle size={20} aria-hidden />
               Quero ganhar assim com a G2G
             </Button>
           </div>
