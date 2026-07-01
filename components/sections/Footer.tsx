@@ -7,7 +7,6 @@ const footerLinks = [
   { label: "Como Funciona", href: "#como-funciona" },
   { label: "Calculadora", href: "/#calculadora" },
   { label: "Depoimentos", href: "/#depoimentos" },
-  { label: "Segurança", href: "/seguranca" },
   { label: "Contato", href: "#contato" },
 ];
 
